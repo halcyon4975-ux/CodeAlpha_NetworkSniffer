@@ -1,83 +1,78 @@
 # Python Packet Sniffer
 
-A simple packet sniffer developed using **Python** and **Scapy** to capture and analyze live network traffic. The application listens for packets on the network interface and displays essential packet information such as IP addresses, protocols, ports, and payload data.
+## Overview
+
+This project is a simple packet sniffer developed in Python using the Scapy library. It captures live network packets from the local network interface and extracts key information from each packet for analysis.
+
+The application demonstrates basic network packet inspection by displaying source and destination IP addresses, transport protocols, port numbers, timestamps, and packet payloads (when available).
+
+---
 
 ## Features
 
-- Capture live network packets
-- Display source and destination IP addresses
-- Identify network protocols (TCP, UDP, ICMP)
-- Display source and destination port numbers
-- Display packet payload (when available)
-- Timestamp each captured packet
-- Count captured packets
+* Capture live network traffic
+* Display source IP address
+* Display destination IP address
+* Identify packet protocols (TCP, UDP, ICMP)
+* Display source and destination port numbers
+* Display packet payload (when available)
+* Display packet timestamp
+* Count captured packets
+
+---
 
 ## Technologies Used
 
-- Python 3.x
-- Scapy
-- Npcap (Windows)
+* Python 3
+* Scapy
+* Npcap (Windows)
 
-## Project Structure
-
-```
-packet-sniffer/
-│
-├── packet_sniffer.py
-├── requirements.txt
-└── README.md
-```
+---
 
 ## Installation
 
-### 1. Clone the repository
+### Install Scapy
 
 ```bash
-git clone <repository-url>
-cd packet-sniffer
+pip install scapy
 ```
 
-### 2. Create a virtual environment
+### Install Npcap (Windows)
 
-Windows
+Download and install Npcap, ensuring that **WinPcap API-Compatible Mode** is enabled during installation.
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Install Npcap
-
-For Windows, install **Npcap** and enable **WinPcap API-Compatible Mode** during installation.
+---
 
 ## Running the Program
 
-Run the packet sniffer with:
+Execute the program using:
 
 ```bash
 python packet_sniffer.py
 ```
 
-The application will begin capturing live network traffic until it is stopped manually (Ctrl + C) or reaches the specified packet count if configured.
+The program will begin capturing live network packets and display their details in the terminal.
+
+To stop packet capture, press:
+
+```text
+CTRL + C
+```
+
+---
 
 ## Sample Output
 
-```
+```text
 ==================================================
-Packet #1
-Time: 2026-06-23 10:15:42
+Packet #15
+Time: 2026-06-28 10:45:12
 
-Source IP: 192.168.1.10
-Destination IP: 8.8.8.8
+Source IP: 10.217.116.56
+Destination IP: 10.217.116.105
 
 Protocol: UDP
-Source Port: 54321
+Source Port: 50312
 Destination Port: 53
 
 Payload:
@@ -85,18 +80,10 @@ b'...'
 ==================================================
 ```
 
-## Learning Outcomes
 
-This project demonstrates practical understanding of:
 
-- Network packet capture
-- IP addressing
-- TCP/IP protocols
-- Packet analysis
-- Python programming for cybersecurity
-- Basic network traffic monitoring
+---
 
 ## Author
 
-**Derick**
-
+Derick
